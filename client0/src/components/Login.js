@@ -1,5 +1,7 @@
 import React, { Fragment, useState } from "react";
 import { Link, Navigate } from "react-router-dom";
+import "./Login.css";
+
 
 // notification
 import { ToastContainer, toast } from 'react-toastify';
@@ -69,8 +71,10 @@ const Login = ({setAuth}) => {
 
   return (
     <Fragment>
-      <h1 className="mt-5 text-center">Login</h1>
-      <form onSubmit={onSubmitForm}>
+      <section class="u-clearfix u-image u-section-2"> 
+      
+      <form className="login-form" onSubmit={onSubmitForm}>
+      <h1 className="mt-5 pt-5 text-center">Login</h1>
         <input
           type="text"
           name="email"
@@ -88,6 +92,7 @@ const Login = ({setAuth}) => {
         <button className="btn btn-success btn-block">Submit</button>
       </form>
       <Link to="/register">register</Link>
+      </section>
     </Fragment>
   );
 };

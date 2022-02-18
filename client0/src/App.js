@@ -8,10 +8,14 @@ import Login from './components/Login';
 import Register from './components/Register';
 import Dashboard from './components/Dashboard';
 import Hero from './components/hero';
+import Navbar from './components/navbar';
+import Footber from './components/footer';
+
 
 // notification
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Footer from './components/footer';
 
 function App() {
 
@@ -42,9 +46,11 @@ function App() {
   return (
     <Fragment>
       <Router>
-        <div className='container'>
+        <Navbar></Navbar>
+        <div class="container mt-5">
+
           <Routes>
-          <Route exact path="/" element ={<Hero />} />
+          { <Route exact path="/" element ={<Hero />} /> }
             <Route exact path="/login" element = { !isAuthenticated ? (
                 <Login setAuth = {setAuth} /> 
                 ) : (
@@ -62,6 +68,8 @@ function App() {
                 )} />
           </Routes>
         </div>
+
+        <Footer></Footer>
       </Router>
     </Fragment>
   );

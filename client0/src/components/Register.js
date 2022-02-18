@@ -50,7 +50,7 @@ const Register = ({setAuth}) => {
   
     return (
     <Fragment>
-      <h1 className="mt-5 text-center">Register</h1>
+      <h1 className="mt-5 pt-5 text-center">Register</h1>
       <form onSubmit={onSubmitForm}>
         <input
           type="text"
